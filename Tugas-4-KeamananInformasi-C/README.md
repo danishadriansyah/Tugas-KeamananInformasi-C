@@ -202,7 +202,7 @@ Input:
 Masukkan Server URL: http://localhost:65432
 ```
 
-### 4. Jalankan Client Kedua
+### 4. Jalankan Client Kedua (Opsional)
 Terminal 3:
 ```bash
 cd Tugas-4-KeamananInformasi-C
@@ -216,6 +216,19 @@ Masukkan Server URL: http://localhost:65432
 
 ### 5. Mulai Chat
 Ketik pesan di salah satu client, akan muncul di client lain dengan tanda ✓ jika signature valid.
+
+### 6. Remote Access (Opsional)
+
+Jika ingin akses dari device lain atau internet, gunakan cloudflared:
+
+Terminal 4:
+```bash
+cloudflared tunnel --url http://localhost:65432
+```
+
+Output akan memberikan URL publik seperti `https://random-name.trycloudflare.com`
+
+Gunakan URL tersebut di client untuk akses remote.
 
 ## Keamanan yang Diimplementasikan
 
